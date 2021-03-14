@@ -42,6 +42,11 @@ class Table extends Component {
       <div>
         <button onClick={this.addRow}>Add Row</button>
         <button onClick={this.addColumn}>Add Column</button>
+        <button onClick={this.removeRow}>Remove Row</button>
+        <button onClick={this.removeColumn}>Remove Column</button>
+        <button onClick={this.fillUnocolored}>Fill Uncolored</button>
+        <button onClick={this.fillAll}>Fill All</button>
+        <button onClick={this.clear}>Clear</button>
         <select onChange={this.handleColorChange}>
           <option value="red">red</option>
           <option value="blue">blue</option>
