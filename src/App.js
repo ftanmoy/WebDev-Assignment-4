@@ -11,7 +11,7 @@ const App = () => {
     if (rows === 0) {
       setRow(1);
       setCol(1);
-    } 
+    }
     else {
       setRow(rows => rows + 1);
     }
@@ -21,18 +21,36 @@ const App = () => {
     if (cols === 0) {
       setRow(1);
       setCol(1);
-    } 
+    }
     else {
       setCol(cols => cols + 1);
     }
   };
 
   const removeRow = () => {
-
+    if (rows > 0) {
+      if (rows === 1){
+        setRow(0);
+        setRow(0);
+      }
+      else {
+        setRow(rows => rows - 1);
+      }
+      console.log(rows)
+    }
   };
 
   const removeCol = () => {
-
+    if (cols > 0) {
+      if (cols === 1){
+        setCol(0);
+        setCol(0);
+      }
+      else {
+        setCol(cols => cols - 1);
+      }
+      console.log(cols)
+    }
   };
 
   const colorSelected = e => setColor(e.target.value);
@@ -41,7 +59,7 @@ const App = () => {
   const fill = () => {};
   const fillUncolored = () => {};
   const clearAll = () => {};
-  
+
   return (
   <div>
     <h1>ReactGrid</h1>
