@@ -1,11 +1,35 @@
 body {
   text-align: center;
+  background-color: dodgerBlue;
+}
+
+.header {
+  color: white;
+}
+
+.header h1{
+  font-size: 70px;
+}
+
+button {
+  border-radius: 15px;
+  padding: 8px 16px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+select {
+  margin: 0 5px;
+  padding: 8px 16px;
+  border-radius: 15px;
 }
 
 td {
+  background-color: white;
   border: 1px solid black;
-  height: 50px;
-  width: 50px;
+  height: 35px;
+  width: 35px;
+  border-radius: 35%;
 }
 
 #grid {

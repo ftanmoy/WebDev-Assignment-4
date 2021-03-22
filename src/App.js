@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import './App.css';
 import Table from './components/Table';
+import TableCell from './components/TableCell'
 
 const App = () => {
   const [rows, setRow] = useState(0);
@@ -56,13 +57,32 @@ const App = () => {
   const colorSelected = e => setColor(e.target.value);
   const handleApplyColor = e => (e.target.style.backgroundColor = color);
 
-  const fill = () => {};
-  const fillUncolored = () => {};
+  const fill = () => {
+
+  };
+  const fillUncolored = () => {
+
+  };
+
+  const onSelected = () => {
+    if(TableCell.backgroundColor == 'white'){
+      this.state = {
+        useEffect() {
+          document.td.style.backgroundColor = colorSelected;
+
+          return () => {
+            document.td.style.backgroundColor = colorSelected;
+          }
+        }
+      }
+    }
+  };
+
   const clearAll = () => {};
 
   return (
   <div>
-    <h1>ReactGrid</h1>
+    <h1 class='header'>ReactGrid</h1>
       <button onClick={addRow}>Add Row</button>
       <button onClick={addCol}>Add Column</button>
       <button onClick={removeRow}>Remove Row</button>
@@ -72,12 +92,14 @@ const App = () => {
       <button onClick={clearAll}>Clear</button>
 
       <select onChange={colorSelected}>
-        <option value="red">red</option>
-        <option value="blue">blue</option>
-        <option value="yellow">yellow</option>
+        <option value="red">Red</option>
+        <option value="blue">Blue</option>
+        <option value="yellow">Yellow</option>
+        <option value="brown">Brown</option>
       </select>
 
       <Table numRows={rows} numCols={cols} handleApplyColor={handleApplyColor} />
+
 
     </div>
   );
