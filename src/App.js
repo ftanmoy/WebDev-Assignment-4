@@ -53,15 +53,17 @@ const App = () => {
     }
   };
 
-  const fillUncolored = () => {
-    setColor(colorSelected);
-  };
-
   const colorSelected = e => setColor(e.target.value);
   const handleApplyColor = e => (e.target.style.backgroundColor = color);
 
-  const fill = () => {};
-  const fillUncolored = () => {};
+  const fill = () => {
+    TableCell.backgroundColor = colorSelected;
+  };
+  const fillUncolored = () => {
+    if TableCell.backgroundColor == white{
+      TableCell.backgroundColor = colorSelected;
+    }
+  };
   const clearAll = () => {};
 
   return (
