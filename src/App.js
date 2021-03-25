@@ -58,8 +58,30 @@ const App = () => {
 
   const handleApplyColor = e => (e.target.style.backgroundColor = color);
 
-  const fill = () => {};
-  const fillUncolored = () => {};
+  const fill = () => {
+    var rows =  document.getElementById("grid").getElementsByTagName('td');
+
+      for (var i = 0; i < rows.length; i++) {
+
+          rows[i].style.backgroundColor = color;
+
+      }
+
+  };
+  const fillUncolored = () => {
+    var rows =  document.getElementById("grid").getElementsByTagName('td');
+
+      for (var i = 0; i < rows.length; i++) {
+
+          if (rows[i].style.backgroundColor === "") {
+
+              rows[i].style.backgroundColor = color;
+
+          }
+
+      }
+
+  };
 /*
   const onSelected = () => {
     if(TableCell.backgroundColor == 'white'){
@@ -73,7 +95,16 @@ const App = () => {
       }
   };
 */
-  const clearAll = () => {};
+  const clearAll = () => {
+    var rows =  document.getElementById("grid").getElementsByTagName('td');
+
+      for (var i = 0; i < rows.length; i++) {
+
+          rows[i].style.backgroundColor = "";
+
+      }
+
+  };
 
   return (
   <div>
