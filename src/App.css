@@ -1,0 +1,65 @@
+body {
+  text-align: center;
+  background-color: dodgerBlue;
+}
+
+.header {
+  color: white;
+}
+
+h1{
+  font-size: 50px;
+}
+p{
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
+button {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000080;
+  background-color: white;
+  border-radius: 15px;
+  padding: 10px 25px;
+  margin: 0 10px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.description{
+  padding-bottom: 20px;
+}
+.clear{
+  background-color: red;
+  color: white;
+}
+.clear:hover{
+  background-color: white;
+  color: red;
+}
+button:hover{
+  background-color: #000080;
+  color: white;
+}
+
+select {
+  font-size: 18px;
+  margin: 0 5px;
+  padding: 10px 25px;
+  border-radius: 15px;
+  border: none;
+}
+
+td {
+  background-color: white;
+  border: 1px solid black;
+  height: 35px;
+  width: 35px;
+  border-radius: 35%;
+}
+
+#grid {
+  padding-top: 25px;
+  margin: 0 auto;
+}
