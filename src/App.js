@@ -55,30 +55,34 @@ const App = () => {
   };
 
   const colorSelected = e => setColor(e.target.value);
+
   const handleApplyColor = e => (e.target.style.backgroundColor = color);
 
+  //This function will fill in all of the cells color to the selected one, even if they are not empty
   const fill = () => {
-
-  };
-  const fillUncolored = () => {
-
-  };
-
-  const onSelected = () => {
-    if(TableCell.backgroundColor == 'white'){
-      this.state = {
-        useEffect() {
-          document.td.style.backgroundColor = colorSelected;
-
-          return () => {
-            document.td.style.backgroundColor = colorSelected;
-          }
-        }
+      var rows =  document.getElementById("grid").getElementsByTagName('td');
+      for (var i = 0; i < rows.length; i++) {
+          rows[i].style.backgroundColor = color;
       }
-    }
   };
 
-  const clearAll = () => {};
+  //This function will fill in empty cells color to the selected one.
+  const fillUncolored = () => {
+      var rows =  document.getElementById("grid").getElementsByTagName('td');
+      for (var i = 0; i < rows.length; i++) {
+          if (rows[i].style.backgroundColor === "") {
+              rows[i].style.backgroundColor = color;
+          }
+      }
+  };
+
+  //This function will clear all cells color.
+  const clearAll = () => {
+      var rows =  document.getElementById("grid").getElementsByTagName('td');
+      for (var i = 0; i < rows.length; i++) {
+          rows[i].style.backgroundColor = "";
+      }
+  };
 
   return (
   <div>
