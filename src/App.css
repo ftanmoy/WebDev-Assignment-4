@@ -7,21 +7,48 @@ body {
   color: white;
 }
 
-.header h1{
-  font-size: 70px;
+h1{
+  font-size: 50px;
 }
-
+p{
+  font-size: 20px;
+  color: white;
+  font-weight: bold;
+}
 button {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000080;
+  background-color: white;
   border-radius: 15px;
-  padding: 8px 16px;
-  margin: 0 5px;
+  padding: 10px 25px;
+  margin: 0 10px;
+  border: none;
   cursor: pointer;
+  transition: 0.3s;
+}
+.description{
+  padding-bottom: 20px;
+}
+.clear{
+  background-color: red;
+  color: white;
+}
+.clear:hover{
+  background-color: white;
+  color: red;
+}
+button:hover{
+  background-color: #000080;
+  color: white;
 }
 
 select {
+  font-size: 18px;
   margin: 0 5px;
-  padding: 8px 16px;
+  padding: 10px 25px;
   border-radius: 15px;
+  border: none;
 }
 
 td {

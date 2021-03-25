@@ -57,13 +57,9 @@ const App = () => {
   const colorSelected = e => setColor(e.target.value);
   const handleApplyColor = e => (e.target.style.backgroundColor = color);
 
-  const fill = () => {
-
-  };
-  const fillUncolored = () => {
-
-  };
-
+  const fill = () => {};
+  const fillUncolored = () => {};
+/*
   const onSelected = () => {
     if(TableCell.backgroundColor == 'white'){
       this.state = {
@@ -77,25 +73,35 @@ const App = () => {
       }
     }
   };
-
+*/
   const clearAll = () => {};
 
   return (
   <div>
     <h1 class='header'>ReactGrid</h1>
+    <div class='description'>
+      <p>Add some rows and columns, create a grid, and draw a picture.</p>
+      <p>CHALLENGE: Create an AmongUs character!</p>
+    </div>
       <button onClick={addRow}>Add Row</button>
       <button onClick={addCol}>Add Column</button>
       <button onClick={removeRow}>Remove Row</button>
       <button onClick={removeCol}>Remove Column</button>
       <button onClick={fillUncolored}>Fill Uncolored</button>
       <button onClick={fill}>Fill All</button>
-      <button onClick={clearAll}>Clear</button>
+      <button onClick={clearAll} class="clear">Clear</button>
 
       <select onChange={colorSelected}>
         <option value="red">Red</option>
-        <option value="blue">Blue</option>
+        <option value="#ffc0cb">Pink</option>
+        <option value="#FFE5B4">Peach</option>
+        <option value="#1338be">Blue</option>
+        <option value="#000080">Navy Blue</option>
         <option value="yellow">Yellow</option>
         <option value="brown">Brown</option>
+        <option value="#00FFFF">Cyan</option>
+        <option value="">Erase</option>
+
       </select>
 
       <Table numRows={rows} numCols={cols} handleApplyColor={handleApplyColor} />
