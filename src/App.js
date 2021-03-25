@@ -55,6 +55,7 @@ const App = () => {
   };
 
   const colorSelected = e => setColor(e.target.value);
+
   const handleApplyColor = e => (e.target.style.backgroundColor = color);
 
   const fill = () => {};
@@ -69,9 +70,7 @@ const App = () => {
           return () => {
             document.td.style.backgroundColor = colorSelected;
           }
-        }
       }
-    }
   };
 */
   const clearAll = () => {};
